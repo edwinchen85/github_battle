@@ -14,6 +14,9 @@ module.exports = {
       { test: /\.css$/, use: ['style-loader', 'css-loader'] }
     ]
   },
+  devServer: {
+    historyApiFallback: true
+  },
   plugins: [
     new HTMLWebpackPlugin({
       template: 'app/index.html'
