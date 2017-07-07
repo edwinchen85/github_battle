@@ -1,0 +1,33 @@
+{
+  "name": "github_battle",
+  "version": "1.0.0",
+  "description": "GitHub Battle is a web app that allows user to pick two contestants (github_username) to match up against each other in terms of their GitHub popularity. We will also code a page that show popular GitHub repos among popular programming languages such as JavaScript, Ruby, Java, CSS and Python.",
+  "main": "index.js",
+  "scripts": {
+    "create": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "author": "Edwin Chen",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "html-webpack-plugin": "^2.29.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
