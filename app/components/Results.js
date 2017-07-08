@@ -3,6 +3,17 @@ var queryString = require('query-string');
 var api = require('../utils/api');
 
 class Results extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      winner: null,
+      loser: null,
+      error: null,
+      loading: true
+    }
+  }
+
   componentDidMount() {
     var players = queryString.parse(this.props.location.search);
 
