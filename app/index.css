@@ -97,6 +97,21 @@ a {
   font-weight: bold;
 }
 
+.reset {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  color: #D0021B;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.reset:hover {
+  cursor: pointer;
+}
+
 .nav li {
   margin-right: 15px;
 }
