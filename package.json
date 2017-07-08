@@ -7,6 +7,7 @@
     "create": "webpack",
     "start": "webpack-dev-server --open",
     "build": "NODE_ENV='production' webpack -p",
+    "firebase-init": "firebase login && firebase init"
   },
   "babel": {
     "presets": [
