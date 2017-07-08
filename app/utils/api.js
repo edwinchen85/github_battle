@@ -28,6 +28,21 @@ function calculateScore(profile, repos) {
   return (followers * 3) + totalStars;
 }
 
+function getUserData(player) {
+  return axios.all([
+    getProfile(player),
+    getRepos(player)
+  ]).then(function(data) {
+    var profile = data[0];
+    var repos = data[1];
+
+    return {
+      profile: profile,
+      score: calculateScore(profile, repos)
+    }
+  });
+}
+
 module.exports = {
   fetchPopularRepos: function(language) {
     var encodedURI = window.encodeURI('https://api.github.com/search/repositories?q=stars:>1+language:' + language + '&sort=stars&order=desc&type=Repositories');
