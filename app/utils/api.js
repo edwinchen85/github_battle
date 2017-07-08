@@ -15,6 +15,12 @@ function getRepos(username) {
   return axios.get('https://api.github.com/users/' + username + '/repos' + params + '&per_page=100');
 }
 
+function getStarCount(repos) {
+  return repos.data.reduce(function(count, repo) {
+    return count + repo.stargazers_count;
+  }, 0)
+}
+
 module.exports = {
   fetchPopularRepos: function(language) {
     var encodedURI = window.encodeURI('https://api.github.com/search/repositories?q=stars:>1+language:' + language + '&sort=stars&order=desc&type=Repositories');
