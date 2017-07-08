@@ -118,6 +118,8 @@ class Battle extends React.Component {
   render() {
     var playerOneName = this.state.playerOneName;
     var playerTwoName = this.state.playerTwoName;
+    var playerOneImage = this.state.playerOneImage;
+    var playerTwoImage = this.state.playerTwoImage;
 
     return (
       <div>
@@ -129,11 +131,27 @@ class Battle extends React.Component {
             onSubmit={this.handleSubmit}
           />}
 
+          {playerOneImage !== null &&
+           <PlayerPreview
+            avatar = {playerOneImage}
+            username = {playerOneName}
+            onReset = {this.handleReset}
+            id = 'playerOne'
+           />}
+
           {!playerTwoName &&
             <PlayerInput
             id = 'playerTwo'
             label = 'Player Two'
             onSubmit={this.handleSubmit}
+          />}
+
+          {playerTwoImage !== null &&
+          <PlayerPreview
+           avatar = {playerTwoImage}
+           username = {playerTwoName}
+           onReset = {this.handleReset}
+           id = 'playerTwo'
           />}
         </div>
       </div>
