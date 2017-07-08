@@ -12,3 +12,5 @@ Among the React technologies we'll learn are:
 5. Axios
 
 [Visit demo site hosted on Firebase.](https://github-battle-29be6.firebaseapp.com/popular)
+
+![Preview](screenshot.png)
